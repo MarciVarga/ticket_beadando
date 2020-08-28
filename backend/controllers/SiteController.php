@@ -241,6 +241,12 @@ class SiteController extends Controller
                 $user = $model->fillTo($user);
                 $user->save();
 
+                if ($user->is_admin == 0 && $user->id == Yii::$app->user->identity->getId()) {
+                    Yii::$app->user->logout();
+
+                    return $this->goHome();
+                }
+
                 Yii::$app->session->setFlash('success', 'You have updated this user: ' . $user->username);
             } else {
                 Yii::$app->session->setFlash('error', 'Failed to save');
