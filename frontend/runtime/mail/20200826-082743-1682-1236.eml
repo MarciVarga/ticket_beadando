@@ -1,0 +1,55 @@
+Message-ID: <dad9ed3d651b66ad74c13168d888e2b0@y2aa-frontend.test>
+Date: Wed, 26 Aug 2020 08:27:43 +0000
+Subject: Account registration at Ticket App
+From: Ticket App robot <support@example.com>
+To: marci.vagyok@gmail.com
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="_=_swift_1598430463_f4a8072179d29e6daf03606dea0ed3ec_=_"
+
+
+--_=_swift_1598430463_f4a8072179d29e6daf03606dea0ed3ec_=_
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+
+Hello Marci,
+
+Follow the link below to verify your email:
+
+http:=
+//y2aa-frontend.test/site/verify-email?token=3D5sbBE7XYsekuN93bbO8HXzdzse4e=
+f4K-_1598430463
+
+--_=_swift_1598430463_f4a8072179d29e6daf03606dea0ed3ec_=_
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns=3D"http://www.w3.org/1999/=
+xhtml">
+<head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/ht=
+ml; charset=3DUTF-8" />
+    <title></title>
+    </head>
+<body>
+    =
+    <div class=3D"verify-email">
+    <p>Hello Marci,</p>
+
+    <p>Foll=
+ow the link below to verify your email:</p>
+
+    <p><a href=3D"http://y=
+2aa-frontend.test/site/verify-email?token=3D5sbBE7XYsekuN93bbO8HXzdzse4ef4K=
+-_1598430463">http://y2aa-frontend.test/site/verify-email?token=3D5sbBE7XYs=
+ekuN93bbO8HXzdzse4ef4K-_1598430463</a></p>
+</div>
+    </body>
+</html>=
+
+
+
+--_=_swift_1598430463_f4a8072179d29e6daf03606dea0ed3ec_=_--

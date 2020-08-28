@@ -1,0 +1,868 @@
+2020-08-18 10:51:43 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: name in /app/vendor/yiisoft/yii2/console/Controller.php:233
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#2 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('create', Array)
+#3 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#4 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /app/yii(23): yii\base\Application->run()
+#8 {main}
+2020-08-18 10:51:43 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '3'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 50374 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 50374 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597747903.9448
+    'REQUEST_TIME' => 1597747903
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2020-08-18 11:23:18 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "mgirate/history". in /app/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('mgirate/history', Array)
+#1 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('mgirate/history', Array)
+#2 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /app/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "mgirate/history". in /app/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('mgirate/history', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /app/yii(23): yii\base\Application->run()
+#3 {main}
+2020-08-18 11:23:18 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '3'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 50374 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 50374 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597749798.3992
+    'REQUEST_TIME' => 1597749798
+    'argv' => [
+        0 => './yii'
+        1 => 'mgirate/history'
+        2 => 'al'
+    ]
+    'argc' => 3
+]
+2020-08-18 11:23:26 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "mgirate/history". in /app/vendor/yiisoft/yii2/base/Module.php:537
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('mgirate/history', Array)
+#1 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('mgirate/history', Array)
+#2 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#3 /app/yii(23): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "mgirate/history". in /app/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('mgirate/history', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /app/yii(23): yii\base\Application->run()
+#3 {main}
+2020-08-18 11:23:26 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '3'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 50374 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 50374 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597749805.9911
+    'REQUEST_TIME' => 1597749805
+    'argv' => [
+        0 => './yii'
+        1 => 'mgirate/history'
+        2 => 'all'
+    ]
+    'argc' => 3
+]
+2020-08-19 08:03:46 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unknown option: --table. Options available: --color, --interactive, --help, --silentExitOnException, --overwrite, --db, --ns, --tableName, --modelClass, --baseClass, --generateRelations, --generateRelationsFromCurrentSchema, --generateLabelsFromComments, --useTablePrefix, --standardizeCapitals, --singularize, --useSchemaName, --generateQuery, --queryNs, --queryClass, --queryBaseClass, --template, --enableI18N, --messageCategory in /app/vendor/yiisoft/yii2/console/Controller.php:170
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('model', Array)
+#1 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('gii/model', Array)
+#2 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('gii/model', Array)
+#3 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 /app/yii(23): yii\base\Application->run()
+#5 {main}
+2020-08-19 08:03:45 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '5'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 44644 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 44644 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/app/console'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597824225.9877
+    'REQUEST_TIME' => 1597824225
+    'argv' => [
+        0 => './yii'
+        1 => 'gii/model'
+        2 => '--table=ticket'
+    ]
+    'argc' => 3
+]
+2020-08-19 08:34:40 [-][-][-][error][yii\console\Exception] yii\console\Exception: Unknown option: --table. Options available: --color, --interactive, --help, --silentExitOnException, --overwrite, --db, --ns, --tableName, --modelClass, --baseClass, --generateRelations, --generateRelationsFromCurrentSchema, --generateLabelsFromComments, --useTablePrefix, --standardizeCapitals, --singularize, --useSchemaName, --generateQuery, --queryNs, --queryClass, --queryBaseClass, --template, --enableI18N, --messageCategory in /app/vendor/yiisoft/yii2/console/Controller.php:170
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('model', Array)
+#1 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('gii/model', Array)
+#2 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('gii/model', Array)
+#3 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#4 /app/yii(23): yii\base\Application->run()
+#5 {main}
+2020-08-19 08:34:40 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '5'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 44644 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 44644 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/app/console'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597826080.0374
+    'REQUEST_TIME' => 1597826080
+    'argv' => [
+        0 => './yii'
+        1 => 'gii/model'
+        2 => '--table'
+    ]
+    'argc' => 3
+]
+2020-08-19 08:36:54 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: gii/from in /app/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('from', Array)
+#1 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('from', Array)
+#2 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('gii/from', Array)
+#3 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('gii/from', Array)
+#4 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 /app/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "gii/from". in /app/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('gii/from', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /app/yii(23): yii\base\Application->run()
+#3 {main}
+2020-08-19 08:36:54 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '5'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 44644 22'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 44644 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'OLDPWD' => '/app/console'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1597826214.1572
+    'REQUEST_TIME' => 1597826214
+    'argv' => [
+        0 => './yii'
+        1 => 'gii/from'
+    ]
+    'argc' => 2
+]
+2020-08-26 10:19:31 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: version in /app/vendor/yiisoft/yii2/console/Controller.php:233
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#2 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('mark', Array)
+#3 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('mark', Array)
+#4 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/mark', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/mark', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /app/yii(23): yii\base\Application->run()
+#8 {main}
+2020-08-26 10:19:31 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598437171.1197
+    'REQUEST_TIME' => 1598437171
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+    ]
+    'argc' => 2
+]
+2020-08-26 10:20:22 [-][-][-][error][yii\console\Exception] yii\console\Exception: The version argument must be either a timestamp (e.g. 101129_185401)
+or the full name of a migration (e.g. m101129_185401_create_user_table)
+or the full name of a namespaced migration (e.g. app\migrations\M101129185401CreateUserTable). in /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:409
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionMark('m200818_m130524...')
+#1 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#3 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('mark', Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('mark', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/mark', Array)
+#6 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/mark', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /app/yii(23): yii\base\Application->run()
+#9 {main}
+2020-08-26 10:20:22 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598437222.1645
+    'REQUEST_TIME' => 1598437222
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+        2 => 'm200818_m130524_201442_init'
+    ]
+    'argc' => 3
+]
+2020-08-26 10:20:36 [-][-][-][error][yii\console\Exception] yii\console\Exception: The version argument must be either a timestamp (e.g. 101129_185401)
+or the full name of a migration (e.g. m101129_185401_create_user_table)
+or the full name of a namespaced migration (e.g. app\migrations\M101129185401CreateUserTable). in /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php:409
+Stack trace:
+#0 [internal function]: yii\console\controllers\BaseMigrateController->actionMark('init')
+#1 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#3 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('mark', Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('mark', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/mark', Array)
+#6 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/mark', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#8 /app/yii(23): yii\base\Application->run()
+#9 {main}
+2020-08-26 10:20:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598437236.3195
+    'REQUEST_TIME' => 1598437236
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/mark'
+        2 => 'init'
+    ]
+    'argc' => 3
+]
+2020-08-26 10:25:36 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: name in /app/vendor/yiisoft/yii2/console/Controller.php:233
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#2 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('create', Array)
+#3 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#4 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /app/yii(23): yii\base\Application->run()
+#8 {main}
+2020-08-26 10:25:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598437536.6237
+    'REQUEST_TIME' => 1598437536
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2020-08-26 12:26:42 [-][-][-][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'console\controllers\TicketController' in file: /app/console/controllers/TicketController.php. Namespace missing? in /app/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('console\\control...')
+#1 [internal function]: spl_autoload_call('console\\control...')
+#2 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(279): class_exists('console\\control...')
+#3 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(257): yii\console\controllers\HelpController->validateControllerClass('console\\control...')
+#4 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(172): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#5 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(192): yii\console\controllers\HelpController->getCommands()
+#6 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(292): yii\console\controllers\HelpController->getCommandDescriptions()
+#7 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#8 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#9 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#11 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#12 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#13 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#14 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#15 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#16 /app/yii(23): yii\base\Application->run()
+#17 {main}
+2020-08-26 12:26:42 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598444802.3199
+    'REQUEST_TIME' => 1598444802
+    'argv' => [
+        0 => './yii'
+    ]
+    'argc' => 1
+]
+2020-08-26 12:27:20 [-][-][-][error][Error] Error: Undefined constant 'yii\console\controllers' in /app/console/controllers/TicketController.php:3
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/BaseYii.php(293): include()
+#1 [internal function]: yii\BaseYii::autoload('console\\control...')
+#2 [internal function]: spl_autoload_call('console\\control...')
+#3 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(279): class_exists('console\\control...')
+#4 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(257): yii\console\controllers\HelpController->validateControllerClass('console\\control...')
+#5 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(172): yii\console\controllers\HelpController->getModuleCommands(Object(yii\console\Application))
+#6 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(192): yii\console\controllers\HelpController->getCommands()
+#7 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(292): yii\console\controllers\HelpController->getCommandDescriptions()
+#8 /app/vendor/yiisoft/yii2/console/controllers/HelpController.php(67): yii\console\controllers\HelpController->getDefaultHelp()
+#9 [internal function]: yii\console\controllers\HelpController->actionIndex(NULL)
+#10 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#12 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#13 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#14 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('', Array)
+#15 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('', Array)
+#16 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#17 /app/yii(23): yii\base\Application->run()
+#18 {main}
+2020-08-26 12:27:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 32850 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 32850 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598444840.5935
+    'REQUEST_TIME' => 1598444840
+    'argv' => [
+        0 => './yii'
+    ]
+    'argc' => 1
+]
+2020-08-27 10:09:42 [-][-][-][error][yii\console\Exception] yii\console\Exception: Missing required arguments: name in /app/vendor/yiisoft/yii2/console/Controller.php:233
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/base/InlineAction.php(51): yii\console\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#2 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('create', Array)
+#3 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('create', Array)
+#4 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/create', Array)
+#5 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/create', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#7 /app/yii(23): yii\base\Application->run()
+#8 {main}
+2020-08-27 10:09:42 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 60786 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 60786 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598522982.8797
+    'REQUEST_TIME' => 1598522982
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/create'
+    ]
+    'argc' => 2
+]
+2020-08-27 15:08:29 [-][-][-][error][ParseError] ParseError: syntax error, unexpected '$user' (T_VARIABLE) in /app/console/migrations/m200827_150028_insertAdmin.php:19
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/controllers/MigrateController.php(197): yii\console\controllers\BaseMigrateController->includeMigrationFile('m200827_150028_...')
+#1 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(726): yii\console\controllers\MigrateController->createMigration('m200827_150028_...')
+#2 /app/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(202): yii\console\controllers\BaseMigrateController->migrateUp('m200827_150028_...')
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('', Array)
+#7 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('', Array)
+#8 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate', Array)
+#9 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate', Array)
+#10 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#11 /app/yii(23): yii\base\Application->run()
+#12 {main}
+2020-08-27 15:08:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 36320 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 36320 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598540908.2353
+    'REQUEST_TIME' => 1598540908
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2020-08-28 10:09:20 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request: migrate/reload in /app/vendor/yiisoft/yii2/base/Controller.php:151
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Controller.php(179): yii\base\Controller->runAction('reload', Array)
+#1 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\console\Controller->runAction('reload', Array)
+#2 /app/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction('migrate/reload', Array)
+#3 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/reload', Array)
+#4 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#5 /app/yii(23): yii\base\Application->run()
+#6 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "migrate/reload". in /app/vendor/yiisoft/yii2/console/Application.php:183
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction('migrate/reload', Array)
+#1 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\console\Application->handleRequest(Object(yii\console\Request))
+#2 /app/yii(23): yii\base\Application->run()
+#3 {main}
+2020-08-28 10:09:20 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'XDG_SESSION_ID' => '2'
+    'TERM' => 'xterm-256color'
+    'SHELL' => '/bin/bash'
+    'SSH_CLIENT' => '10.0.2.2 50186 22'
+    'OLDPWD' => '/'
+    'SSH_TTY' => '/dev/pts/0'
+    'USER' => 'vagrant'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/vagrant'
+    'PATH' => '/home/vagrant/bin:/home/vagrant/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/app'
+    'LANG' => 'en_US.UTF-8'
+    'SHLVL' => '1'
+    'HOME' => '/home/vagrant'
+    'LANGUAGE' => 'en_US:'
+    'LOGNAME' => 'vagrant'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'SSH_CONNECTION' => '10.0.2.2 50186 10.0.2.15 22'
+    'LESSOPEN' => '| /usr/bin/lesspipe %s'
+    'XDG_RUNTIME_DIR' => '/run/user/1000'
+    'LESSCLOSE' => '/usr/bin/lesspipe %s %s'
+    '_' => './yii'
+    'PHP_SELF' => './yii'
+    'SCRIPT_NAME' => './yii'
+    'SCRIPT_FILENAME' => './yii'
+    'PATH_TRANSLATED' => './yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1598609360.1589
+    'REQUEST_TIME' => 1598609360
+    'argv' => [
+        0 => './yii'
+        1 => 'migrate/reload'
+    ]
+    'argc' => 2
+]
