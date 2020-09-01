@@ -44764,3 +44764,76 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1598609707.3683
     'REQUEST_TIME' => 1598609707
 ]
+2020-08-31 14:24:00 [192.168.83.1][2][2dafcc9orj6dsqha00d2mvqt56][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: common\models\Comment::fillFrom() in /app/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /app/backend/controllers/SiteController.php(288): yii\base\Component->__call('fillFrom', Array)
+#1 [internal function]: backend\controllers\SiteController->actionShowTicket('7')
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('show-ticket', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/show-ticke...', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/backend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2020-08-31 14:24:00 [192.168.83.1][2][2dafcc9orj6dsqha00d2mvqt56][info][application] $_GET = [
+    'id' => '7'
+]
+
+$_POST = [
+    '_csrf-backend' => '-PdvKZ1FiPI_ARzWjrbS7dLRDOpSXNejuAwIrmkMVgCbrTZuzHDkrW5FRILW_6OZ55pJ0mI7nfDaSzzMG2oPWA=='
+    'CommentForm' => [
+        'text' => 'uku'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-backend' => '2dafcc9orj6dsqha00d2mvqt56'
+    '_csrf-backend' => 'b5b6695d8dbbac2fa45c2034a071697939d8bc2dd330546788e7e605ca7a1497a:2:{i:0;s:13:\"_csrf-backend\";i:1;s:32:\"cZYGQ5l_QDXTXIqt5KE80gJSbG4brfYX\";}'
+    '_identity-backend' => '432cafee4f44149be39e36317ccef166915dceacaa26bfb57845745ae7a4b4cca:2:{i:0;s:17:\"_identity-backend\";i:1;s:46:\"[2,\"-cFMlbXDhk6qO2C8tWePcWh9yziylo_o\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-backend=2dafcc9orj6dsqha00d2mvqt56; _csrf-backend=b5b6695d8dbbac2fa45c2034a071697939d8bc2dd330546788e7e605ca7a1497a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22cZYGQ5l_QDXTXIqt5KE80gJSbG4brfYX%22%3B%7D; _identity-backend=432cafee4f44149be39e36317ccef166915dceacaa26bfb57845745ae7a4b4cca%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_identity-backend%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22-cFMlbXDhk6qO2C8tWePcWh9yziylo_o%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '132'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-backend.test/site/show-ticket?id=7'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-backend.test'
+    'SCRIPT_FILENAME' => '/app/backend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-backend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '48974'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/backend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-ticket?id=7'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '132'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=7'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598883840.1774
+    'REQUEST_TIME' => 1598883840
+]

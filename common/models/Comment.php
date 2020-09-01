@@ -75,15 +75,4 @@ class Comment extends ActiveRecord
     {
         return $this->hasOne(User::className(), ['id' => 'user_id']);
     }
-
-    /**
-     * @param CommentForm $model
-     * @return $this
-     */
-    public function fillFrom(CommentForm $model): Comment
-    {
-        $this->text = $model->text;
-
-        return $this;
-    }
 }

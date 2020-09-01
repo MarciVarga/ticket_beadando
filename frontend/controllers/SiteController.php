@@ -9,6 +9,7 @@ use frontend\models\ResendVerificationEmailForm;
 use frontend\models\TicketForm;
 use frontend\models\UserForm;
 use frontend\models\VerifyEmailForm;
+use phpDocumentor\Reflection\Types\Integer;
 use Yii;
 use yii\base\InvalidArgumentException;
 use yii\db\Exception;
@@ -75,6 +76,35 @@ class SiteController extends Controller
                 'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
             ],
         ];
+    }
+
+    protected function getUserId()
+    {
+        return Yii::$app->user->identity->getId();
+    }
+
+    protected function getUserTicket($id)
+    {
+        /** @var Ticket $ticket */
+        $ticket = Ticket::find()
+            ->ofId($id)
+            ->ofUserId($this->getUserId())
+            ->one();
+
+        if ($ticket == null) {
+            return $this->goHome();
+        }
+
+        return $ticket;
+    }
+
+    protected function getUser()
+    {
+        $user = User::find()
+            ->ofId($this->getUserId())
+            ->one();
+
+        return $user;
     }
 
     /**
@@ -280,40 +310,46 @@ class SiteController extends Controller
      * Add a Ticket
      *
      * @return string|Response
+     * @throws Exception
      */
     public function actionAddTicket()
     {
-        $model = new TicketForm();
-        if (Yii::$app->request->isPost  && $model->load($_POST)) {
-            $model->imageFiles = UploadedFile::getInstances($model, 'imageFiles');
+        $ticketForm = new TicketForm();
 
-            /*if ($model->validate()) {
-                $model->upload();
+        if (Yii::$app->request->isPost  && $ticketForm->load($_POST)) {
+            $ticketForm->imageFiles = UploadedFile::getInstances($ticketForm, 'imageFiles');
 
-                if ($model->addTicket()) {
-                    Yii::$app->session->setFlash('success', 'Ticket addition was successful.');
+            if ($ticketForm->validate()) {
+                $ticket = new Ticket();
+                $ticket->user_id = $this->getUserId();
+                $ticket = $ticketForm->fillTo($ticket);
 
-                    return $this->goHome();
-                }
-            }*/
+                if ($ticket->save()) {
+                    $images = $ticketForm->fillImages($ticket->id);
 
-            if ($model->validate()) {
-                if ($model->addTicket()) {
-                    Yii::$app->session->setFlash('success', 'Ticket addition was successful.');
-
-                    $folder_read = Yii::getAlias('@frontend/web/uploads/');
-                    $folder_write = Yii::getAlias('@backend/web/uploads/');
-                    $upload_copy = opendir($folder_read);
-
-                    while ($file = readdir($upload_copy)) {
-                        if ($file != "." && $file != ".." && $file != ".gitkeep") {
-                            copy($folder_read . $file, $folder_write . $file);
+                    foreach ($images as $image) {
+                        try {
+                            $image->save();
+                        } catch (Exception $e) {
+                            throw new Exception($e->getMessage(), $e->errorInfo);
                         }
                     }
 
-                    closedir($upload_copy);
+                    Yii::$app->session->setFlash('success', 'You have added this ticket: ' . $ticketForm->title);
 
-                    return $this->goHome();
+                    $folderRead = Yii::getAlias('@frontend/web/uploads/');
+                    $folderWrite = Yii::getAlias('@backend/web/uploads/');
+                    $uploadCopy = opendir($folderRead);
+
+                    while ($file = readdir($uploadCopy)) {
+                        if ($file != "." && $file != ".." && $file != ".gitkeep") {
+                            copy($folderRead . $file, $folderWrite . $file);
+                        }
+                    }
+
+                    closedir($uploadCopy);
+
+                    return $this->redirect('/site/show-user-tickets');
                 } else {
                     Yii::$app->session->setFlash('error', 'Something went wrong.');
                 }
@@ -321,7 +357,7 @@ class SiteController extends Controller
         }
 
         return $this->render('add_ticket', [
-            'model' => $model,
+            'ticketForm' => $ticketForm,
         ]);
     }
 
@@ -332,19 +368,10 @@ class SiteController extends Controller
      */
     public function actionShowProfile()
     {
-            $model = User::find()
-                ->where(['id' => Yii::$app->user->identity->getId()])
-                ->one();
-
-            $data = [
-                $model->username,
-                $model->email,
-                "Created At: " . date("Y-m-d H:i:s", $model->created_at),
-                "Last Login: " . $model->last_login,
-            ];
+            $user = $this->getUser();
 
             return $this->render('show_profile', [
-                'data' => $data,
+                'user' => $user,
             ]);
     }
 
@@ -356,7 +383,7 @@ class SiteController extends Controller
     public function actionShowUserTickets()
     {
         $tickets = Ticket::find()
-            ->where(['user_id'=>Yii::$app->user->identity->getId()])
+            ->ofUserId($this->getUserId())
             ->with('comments')
             ->orderBy([
                 'is_open' => SORT_DESC,
@@ -373,29 +400,30 @@ class SiteController extends Controller
      * Updates the logged in user's profile
      *
      * @return string
+     * @throws Exception
      */
     public function actionUpdateProfile()
     {
-        $user = User::find()
-            ->ofId(Yii::$app->user->identity->getId())
-            ->one();
+        $user = $this->getUser();
 
-        $model = new UserForm();
-        $model->fillFrom($user);
+        $userForm = new UserForm();
+        $userForm->fillFrom($user);
 
-        if ($model->load(Yii::$app->request->post())) {
-            if ( $model->validate() && $user->validatePassword($model->old_password)) {
-                $user = $model->fillTo($user);
-                $user->save();
+        if ($userForm->load(Yii::$app->request->post())) {
+            if ( $userForm->validate() && $user->validatePassword($userForm->old_password)) {
+                $user = $userForm->fillTo($user);
 
-                Yii::$app->session->setFlash('success', 'You have updated the profile.');
+                if ($user->save()) {
+                    Yii::$app->session->setFlash('success', 'You have updated the profile.');
+                }
+
             } else {
                 Yii::$app->session->setFlash('error', 'Failed to save');
             }
         }
 
         return $this->render('update_profile', [
-            'model' => $model,
+            'userForm' => $userForm,
             'user' => $user,
         ]);
     }
@@ -409,36 +437,35 @@ class SiteController extends Controller
      */
     public function actionShowTicket($id)
     {
-        /** @var Ticket $ticket */
-        $ticket = Ticket::find()
-            ->ofId($id)
-            ->ofUserId(Yii::$app->user->identity->getId())
-            ->one();
-
-        if ($ticket == null) {
-            return $this->goHome();
-        }
+        $ticket = $this->getUserTicket($id);
 
         $transaction = Yii::$app->db->beginTransaction();
         $request = Yii::$app->request->post();
         $commentForm = new CommentForm();
 
-
         if ($commentForm->load($request) && $commentForm->validate()) {
             $comment = new Comment();
-            $comment = $comment->fillFrom($commentForm);
-            $comment->user_id = Yii::$app->user->id;
+            $comment = $commentForm->fillTo($comment);
+            $comment->user_id = $this->getUserId();
             $comment->ticket_id = $id;
 
             if (!$ticket->is_open) {
                 $ticket->is_open = true;
             }
 
-            if ($comment->save() && $ticket->save()) {
-                $transaction->commit();
-            } else {
+            if (!$comment->save()) {
+                Yii::error('Failed to save Comment ' . json_encode($comment->getAttributes()), __METHOD__);
+
                 $transaction->rollBack();
             }
+
+            if (!$ticket->save()) {
+                Yii::error('Failed to save Ticket ' . json_encode($ticket->getAttributes()), __METHOD__);
+
+                $transaction->rollBack();
+            }
+
+            $transaction->commit();
         }
 
         $comments = $ticket->comments;
@@ -446,7 +473,7 @@ class SiteController extends Controller
         $images = $ticket->images;
 
         return $this->render('show_ticket', [
-            'comment_form' => $commentForm,
+            'commentForm' => $commentForm,
             'ticket' => $ticket,
             'comments' => $comments,
             'images' => $images,
@@ -461,15 +488,7 @@ class SiteController extends Controller
      */
     public function actionCloseTicket($id)
     {
-        /** @var Ticket $ticket */
-        $ticket = Ticket::find()
-            ->ofId($id)
-            ->ofUserId(Yii::$app->user->identity->getId())
-            ->one();
-
-        if ($ticket == null) {
-            return $this->goHome();
-        }
+        $ticket = $this->getUserTicket($id);
 
         if ($ticket->is_open) {
             $ticket->is_open = false;

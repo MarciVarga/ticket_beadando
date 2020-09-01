@@ -73,6 +73,24 @@ class SiteController extends Controller
         ];
     }
 
+    protected function getUserId()
+    {
+        return Yii::$app->user->identity->getId();
+    }
+
+    protected function getUserById($id)
+    {
+        $user = User::find()
+            ->ofId($id)
+            ->one();
+
+        if ($user == null) {
+            return $this->goHome();
+        }
+
+        return $user;
+    }
+
     /**
      * Displays homepage.
      *
@@ -172,9 +190,7 @@ class SiteController extends Controller
      */
     public function actionShowProfile($id)
     {
-        $user = User::find()
-            ->ofId($id)
-            ->one();
+        $user = $this->getUserById($id);
 
         $tickets = Ticket::find()
             ->ofUserId($id)
@@ -200,13 +216,7 @@ class SiteController extends Controller
      */
     public function actionDeleteUser($id)
     {
-        $user = User::find()
-            ->ofId($id)
-            ->one();
-
-        if ($user== null) {
-            return $this->goHome();
-        }
+        $user = $this->getUserById($id);
 
         if ($user->delete()) {
             Yii::$app->session->setFlash('success', 'You have deleted this user: ' . $user->username);
@@ -229,9 +239,7 @@ class SiteController extends Controller
      */
     public function actionUpdateUser($id)
     {
-        $user = User::find()
-            ->ofId($id)
-            ->one();
+        $user = $this->getUserById($id);
 
         $model = new UserForm();
         $model->fillFrom($user);
@@ -241,7 +249,7 @@ class SiteController extends Controller
                 $user = $model->fillTo($user);
                 $user->save();
 
-                if ($user->is_admin == 0 && $user->id == Yii::$app->user->identity->getId()) {
+                if ($user->is_admin == 0 && $user->id == $this->getUserId()) {
                     Yii::$app->user->logout();
 
                     return $this->goHome();
@@ -285,19 +293,23 @@ class SiteController extends Controller
 
         if ($commentForm->load($request) && $commentForm->validate()) {
             $comment = new Comment();
-            $comment = $comment->fillFrom($commentForm);
-            $comment->user_id = Yii::$app->user->id;
+            $comment = $commentForm->fillTo($comment);
+            $comment->user_id = $this->getUserId();
             $comment->ticket_id = $id;
 
-            if (!$ticket->is_open) {
-                $ticket->is_open = true;
-            }
+            if (!$comment->save()) {
+                Yii::error('Failed to save Comment ' . json_encode($comment->getAttributes()), __METHOD__);
 
-            if ($comment->save() && $ticket->save()) {
-                $transaction->commit();
-            } else {
                 $transaction->rollBack();
             }
+
+            if (!$ticket->save()) {
+                Yii::error('Failed to save Ticket ' . json_encode($ticket->getAttributes()), __METHOD__);
+
+                $transaction->rollBack();
+            }
+
+            $transaction->commit();
         }
 
         $comments = $ticket->comments;
@@ -325,7 +337,7 @@ class SiteController extends Controller
         /** @var Ticket $ticket */
         $ticket = Ticket::find()
             ->ofId($id)
-            ->ofAdminId(Yii::$app->user->identity->getId())
+            ->ofAdminId($this->getUserId())
             ->one();
 
         if ($ticket == null) {
@@ -367,7 +379,7 @@ class SiteController extends Controller
         }
 
         if ($ticket->admin_id == null) {
-            $ticket->admin_id = Yii::$app->user->identity->getId();
+            $ticket->admin_id = $this->getUserId();
         }
 
         if ($ticket->save()) {

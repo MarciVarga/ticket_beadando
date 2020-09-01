@@ -13,19 +13,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>Your Tickets:</h1>
 
     <ul class="list-group">
-        <?php foreach ($tickets as $ticket): ?>
+        <?php foreach ($tickets as $ticket) { ?>
 
-            <?php if ($ticket->is_open): ?>
+            <?php if ($ticket->is_open) { ?>
             <li class="list-group-item">
-            <?php else: ?>
+            <?php } else { ?>
                 <li class="list-group-item" style="background-color: #ff7a72;">
-            <?php endif; ?>
+            <?php } ?>
                 <?= Html::a($ticket->title, ['site/show-ticket', 'id' => $ticket->id], ['class' => 'profile-link']) ?>
                 <span class="badge">
                     <?= count($ticket->comments) ?>
                 </span>
             </li>
-        <?php endforeach; ?>
+        <?php } ?>
     </ul>
 
     <?= Html::a('Add Ticket', ['site/add-ticket'], ['class' => 'btn btn-primary btn-block']) ?>

@@ -2,7 +2,7 @@
 
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $this yii\web\View */
-/* @var $model frontend\models\UserForm */
+/* @var $userForm frontend\models\UserForm */
 /* @var $user frontend\controllers\SiteController */
 
 use yii\helpers\Html;
@@ -13,19 +13,19 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="update_profile">
 
-    <?php if (Yii::$app->user->isGuest): ?>
+    <?php if (Yii::$app->user->isGuest) { ?>
 
         <p class="text-danger" style="font-weight: bold; font-size: large;" >You have to login!</p>
 
     <?php
-        else:
-        $form = ActiveForm::begin();
+        } else {
+            $form = ActiveForm::begin();
     ?>
 
-        <?= $form->field($model, 'username')->textInput(['value' => Html::encode($user->username)]) ?>
-        <?= $form->field($model, 'email')->textInput(['value' => Html::encode($user->email)]) ?>
-        <?= $form->field($model, 'old_password')->passwordInput() ?>
-        <?= $form->field($model, 'password_hash')->passwordInput() ?>
+        <?= $form->field($userForm, 'username')->textInput(['value' => Html::encode($user->username)]) ?>
+        <?= $form->field($userForm, 'email')->textInput(['value' => Html::encode($user->email)]) ?>
+        <?= $form->field($userForm, 'old_password')->passwordInput() ?>
+        <?= $form->field($userForm, 'password_hash')->passwordInput() ?>
 
         <div class="form-group">
             <?= Html::submitButton('Update Profile', ['class' => 'btn btn-primary']) ?>
@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         ActiveForm::end();
-        endif;
+    }
     ?>
 
 </div>

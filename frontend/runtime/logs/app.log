@@ -76465,3 +76465,1197 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1598609283.9561
     'REQUEST_TIME' => 1598609283
 ]
+2020-08-31 10:43:01 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][error][TypeError] TypeError: Return value of frontend\controllers\SiteController::getUserId() must be an instance of phpDocumentor\Reflection\Types\Integer, integer returned in /app/frontend/controllers/SiteController.php:83
+Stack trace:
+#0 /app/frontend/controllers/SiteController.php(104): frontend\controllers\SiteController->getUserId()
+#1 /app/frontend/controllers/SiteController.php(356): frontend\controllers\SiteController->getUser()
+#2 [internal function]: frontend\controllers\SiteController->actionShowProfile()
+#3 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#5 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('show-profile', Array)
+#6 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/show-profi...', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /app/frontend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2020-08-31 10:43:01 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'lt_L_QOvs4xPw1T0cQogLMKUMrjdCaz-9p6_w1e2Wg_uvv-qMeLV5Bi5EJkFX2RHl_F97LRQ2qugp9f3YPczRg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'ik4ln4a0mjnhfn6j3b8u6gqkk1'
+    '_csrf-frontend' => '8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=ik4ln4a0mjnhfn6j3b8u6gqkk1; _csrf-frontend=8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '107'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-user-tickets'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46180'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-profile'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '107'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598870581.5588
+    'REQUEST_TIME' => 1598870581
+]
+2020-08-31 10:46:10 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][error][TypeError] TypeError: Return value of frontend\controllers\SiteController::getUserId() must be an instance of phpDocumentor\Reflection\Types\Integer, integer returned in /app/frontend/controllers/SiteController.php:83
+Stack trace:
+#0 /app/frontend/controllers/SiteController.php(104): frontend\controllers\SiteController->getUserId()
+#1 /app/frontend/controllers/SiteController.php(356): frontend\controllers\SiteController->getUser()
+#2 [internal function]: frontend\controllers\SiteController->actionShowProfile()
+#3 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#5 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('show-profile', Array)
+#6 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/show-profi...', Array)
+#7 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /app/frontend/web/index.php(17): yii\base\Application->run()
+#9 {main}
+2020-08-31 10:46:10 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'lt_L_QOvs4xPw1T0cQogLMKUMrjdCaz-9p6_w1e2Wg_uvv-qMeLV5Bi5EJkFX2RHl_F97LRQ2qugp9f3YPczRg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'ik4ln4a0mjnhfn6j3b8u6gqkk1'
+    '_csrf-frontend' => '8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=ik4ln4a0mjnhfn6j3b8u6gqkk1; _csrf-frontend=8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '107'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-user-tickets'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46190'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-profile'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '107'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598870770.0476
+    'REQUEST_TIME' => 1598870770
+]
+2020-08-31 10:47:05 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: data in /app/frontend/views/site/show_profile.php:21
+Stack trace:
+#0 /app/frontend/views/site/show_profile.php(21): yii\base\ErrorHandler->handleError()
+#1 /app/vendor/yiisoft/yii2/base/View.php(348): yii\base\View->unknown()
+#2 /app/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#3 /app/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile()
+#4 /app/vendor/yiisoft/yii2/base/Controller.php(409): yii\base\View->render()
+#5 /app/frontend/controllers/SiteController.php(366): yii\base\Controller->render()
+#6 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionShowProfile()
+#7 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/app/vendor/yiisoft/yii2/base/InlineAction.php:57}()
+#8 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#10 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#12 /app/frontend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+2020-08-31 10:47:05 [192.168.83.1][1][ik4ln4a0mjnhfn6j3b8u6gqkk1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'lt_L_QOvs4xPw1T0cQogLMKUMrjdCaz-9p6_w1e2Wg_uvv-qMeLV5Bi5EJkFX2RHl_F97LRQ2qugp9f3YPczRg=='
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'ik4ln4a0mjnhfn6j3b8u6gqkk1'
+    '_csrf-frontend' => '8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=ik4ln4a0mjnhfn6j3b8u6gqkk1; _csrf-frontend=8379981476fe4f5d0473ed9b6b5d54882d7e8ecb11434f58d0342060fdf22c6aa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xa4W2MfhWzDmtUDkUeOTiYvUV9h47AiI%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '107'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-user-tickets'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46190'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-profile'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '107'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598870825.486
+    'REQUEST_TIME' => 1598870825
+]
+2020-08-31 11:19:42 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: model in /app/frontend/views/site/update_profile.php:25
+Stack trace:
+#0 /app/frontend/views/site/update_profile.php(25): yii\base\ErrorHandler->handleError()
+#1 /app/vendor/yiisoft/yii2/base/View.php(348): yii\base\View->unknown()
+#2 /app/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile()
+#3 /app/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile()
+#4 /app/vendor/yiisoft/yii2/base/Controller.php(409): yii\base\View->render()
+#5 /app/frontend/controllers/SiteController.php(409): yii\base\Controller->render()
+#6 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): frontend\controllers\SiteController->actionUpdateProfile()
+#7 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): ::call_user_func_array:{/app/vendor/yiisoft/yii2/base/InlineAction.php:57}()
+#8 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams()
+#9 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction()
+#10 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction()
+#11 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest()
+#12 /app/frontend/web/index.php(17): yii\base\Application->run()
+#13 {main}
+2020-08-31 11:19:42 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '5ubqml5cne5lt84s30pf50apu3'
+    '_csrf-frontend' => '8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"9VQBVbQnQtUMqRGd3G38MCka2djvxEkP\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=5ubqml5cne5lt84s30pf50apu3; _csrf-frontend=8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%229VQBVbQnQtUMqRGd3G38MCka2djvxEkP%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-profile'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46774'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/update-profile/'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => ''
+    'CONTENT_TYPE' => ''
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598872782.5258
+    'REQUEST_TIME' => 1598872782
+]
+2020-08-31 11:24:00 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\models\CommentForm::user_id in /app/vendor/yiisoft/yii2/base/Component.php:209
+Stack trace:
+#0 /app/frontend/controllers/SiteController.php(432): yii\base\Component->__set('user_id', 1)
+#1 [internal function]: frontend\controllers\SiteController->actionShowTicket('4')
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('show-ticket', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/show-ticke...', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/frontend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2020-08-31 11:23:59 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'mmmS9zW-vHIuIMUvfqus9VHzlFzmxBfeEzpSfBLp9y6jP8O1Y9ztHH9UkGIP-euRYrSnZKuHfL8hXjgKaqycfg=='
+    'CommentForm' => [
+        'text' => 'asdasdadasdasdasd'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '5ubqml5cne5lt84s30pf50apu3'
+    '_csrf-frontend' => '8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"9VQBVbQnQtUMqRGd3G38MCka2djvxEkP\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=5ubqml5cne5lt84s30pf50apu3; _csrf-frontend=8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%229VQBVbQnQtUMqRGd3G38MCka2djvxEkP%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '147'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-ticket?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46792'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-ticket?id=4'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '147'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598873039.9828
+    'REQUEST_TIME' => 1598873039
+]
+2020-08-31 11:25:57 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: common\models\CommentForm::save() in /app/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /app/frontend/controllers/SiteController.php(440): yii\base\Component->__call('save', Array)
+#1 [internal function]: frontend\controllers\SiteController->actionShowTicket('4')
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('show-ticket', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/show-ticke...', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/frontend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2020-08-31 11:25:57 [192.168.83.1][1][5ubqml5cne5lt84s30pf50apu3][info][application] $_GET = [
+    'id' => '4'
+]
+
+$_POST = [
+    '_csrf-frontend' => 'mmmS9zW-vHIuIMUvfqus9VHzlFzmxBfeEzpSfBLp9y6jP8O1Y9ztHH9UkGIP-euRYrSnZKuHfL8hXjgKaqycfg=='
+    'CommentForm' => [
+        'text' => 'asdasdadasdasdasd'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '5ubqml5cne5lt84s30pf50apu3'
+    '_csrf-frontend' => '8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"9VQBVbQnQtUMqRGd3G38MCka2djvxEkP\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=5ubqml5cne5lt84s30pf50apu3; _csrf-frontend=8eae3e157797f0fb8657c90e6326e6eed1d9d90b400aa8217985067fe708e4b3a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%229VQBVbQnQtUMqRGd3G38MCka2djvxEkP%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '147'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/show-ticket?id=4'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '46800'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/show-ticket?id=4'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '147'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'id=4'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598873157.7014
+    'REQUEST_TIME' => 1598873157
+]
+2020-08-31 14:08:00 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: common\models\Ticket::images in /app/vendor/yiisoft/yii2/base/Component.php:206
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(324): yii\base\Component->__set('images', Array)
+#1 /app/frontend/models/TicketForm.php(83): yii\db\BaseActiveRecord->__set('images', Array)
+#2 /app/frontend/controllers/SiteController.php(324): frontend\models\TicketForm->fillTo(Object(common\models\Ticket))
+#3 [internal function]: frontend\controllers\SiteController->actionAddTicket()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('add-ticket', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/add-ticket', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/frontend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2020-08-31 14:08:00 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'YG2M0063OnU29GBYfGPIfRK-6ykeGsX3LxIedo5McIspOPWBGdBiKnG5LQweF5woWYrfc0wjl6ZGXm4h-D4d7Q=='
+    'TicketForm' => [
+        'title' => 'Valamicske'
+        'description' => 'sadfasdfas'
+        'imageFiles' => [
+            0 => ''
+        ]
+    ]
+]
+
+$_FILES = [
+    'TicketForm' => [
+        'name' => [
+            'imageFiles' => [
+                0 => 'asdasd.jpeg'
+                1 => 'fg.jpg'
+            ]
+        ]
+        'type' => [
+            'imageFiles' => [
+                0 => 'image/jpeg'
+                1 => 'image/jpeg'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFiles' => [
+                0 => '/tmp/phptWUGg0'
+                1 => '/tmp/phpzmuW5v'
+            ]
+        ]
+        'error' => [
+            'imageFiles' => [
+                0 => 0
+                1 => 0
+            ]
+        ]
+        'size' => [
+            'imageFiles' => [
+                0 => 36906
+                1 => 12514
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'v2e2nleb0vekh8fvotsldepce7'
+    '_csrf-frontend' => '8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=v2e2nleb0vekh8fvotsldepce7; _csrf-frontend=8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '50441'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------15070842985794275272123428041'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/add-ticket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '48912'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/add-ticket'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '50441'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------15070842985794275272123428041'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598882880.3391
+    'REQUEST_TIME' => 1598882880
+]
+2020-08-31 14:08:39 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: common\models\Ticket::images in /app/vendor/yiisoft/yii2/base/Component.php:206
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(324): yii\base\Component->__set('images', Array)
+#1 /app/frontend/models/TicketForm.php(83): yii\db\BaseActiveRecord->__set('images', Array)
+#2 /app/frontend/controllers/SiteController.php(324): frontend\models\TicketForm->fillTo(Object(common\models\Ticket))
+#3 [internal function]: frontend\controllers\SiteController->actionAddTicket()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('add-ticket', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/add-ticket', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/frontend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2020-08-31 14:08:39 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'YG2M0063OnU29GBYfGPIfRK-6ykeGsX3LxIedo5McIspOPWBGdBiKnG5LQweF5woWYrfc0wjl6ZGXm4h-D4d7Q=='
+    'TicketForm' => [
+        'title' => 'Valamicske'
+        'description' => 'sadfasdfas'
+        'imageFiles' => [
+            0 => ''
+        ]
+    ]
+]
+
+$_FILES = [
+    'TicketForm' => [
+        'name' => [
+            'imageFiles' => [
+                0 => 'asdasd.jpeg'
+                1 => 'fg.jpg'
+            ]
+        ]
+        'type' => [
+            'imageFiles' => [
+                0 => 'image/jpeg'
+                1 => 'image/jpeg'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFiles' => [
+                0 => '/tmp/phpTMNS6q'
+                1 => '/tmp/phpjOtR7l'
+            ]
+        ]
+        'error' => [
+            'imageFiles' => [
+                0 => 0
+                1 => 0
+            ]
+        ]
+        'size' => [
+            'imageFiles' => [
+                0 => 36906
+                1 => 12514
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'v2e2nleb0vekh8fvotsldepce7'
+    '_csrf-frontend' => '8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=v2e2nleb0vekh8fvotsldepce7; _csrf-frontend=8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '50441'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------15070842985794275272123428041'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/add-ticket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '48912'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/add-ticket'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '50441'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------15070842985794275272123428041'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598882919.2592
+    'REQUEST_TIME' => 1598882919
+]
+2020-08-31 14:08:47 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][error][yii\base\InvalidCallException] yii\base\InvalidCallException: Setting read-only property: common\models\Ticket::images in /app/vendor/yiisoft/yii2/base/Component.php:206
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(324): yii\base\Component->__set('images', Array)
+#1 /app/frontend/models/TicketForm.php(83): yii\db\BaseActiveRecord->__set('images', Array)
+#2 /app/frontend/controllers/SiteController.php(324): frontend\models\TicketForm->fillTo(Object(common\models\Ticket))
+#3 [internal function]: frontend\controllers\SiteController->actionAddTicket()
+#4 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#5 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#6 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('add-ticket', Array)
+#7 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/add-ticket', Array)
+#8 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 /app/frontend/web/index.php(17): yii\base\Application->run()
+#10 {main}
+2020-08-31 14:08:47 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'ANDBHY2F-lSQUNzgTkR4hbHOntzTbtLYgm7A_cttmQNJhbhP2uKiC9cdkbQsMCzQ-vqqhoFXgInrIrCqvR_0ZQ=='
+    'TicketForm' => [
+        'title' => 'hth'
+        'description' => 'thr'
+        'imageFiles' => [
+            0 => ''
+        ]
+    ]
+]
+
+$_FILES = [
+    'TicketForm' => [
+        'name' => [
+            'imageFiles' => [
+                0 => ''
+            ]
+        ]
+        'type' => [
+            'imageFiles' => [
+                0 => ''
+            ]
+        ]
+        'tmp_name' => [
+            'imageFiles' => [
+                0 => ''
+            ]
+        ]
+        'error' => [
+            'imageFiles' => [
+                0 => 4
+            ]
+        ]
+        'size' => [
+            'imageFiles' => [
+                0 => 0
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'v2e2nleb0vekh8fvotsldepce7'
+    '_csrf-frontend' => '8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=v2e2nleb0vekh8fvotsldepce7; _csrf-frontend=8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '836'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------10655748511570335671933343697'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/add-ticket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '48912'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/add-ticket'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '836'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------10655748511570335671933343697'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598882927.2929
+    'REQUEST_TIME' => 1598882927
+]
+2020-08-31 14:19:13 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: frontend\models\TicketForm::fillImages() in /app/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /app/frontend/controllers/SiteController.php(328): yii\base\Component->__call('fillImages', Array)
+#1 [internal function]: frontend\controllers\SiteController->actionAddTicket()
+#2 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#4 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('add-ticket', Array)
+#5 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/add-ticket', Array)
+#6 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /app/frontend/web/index.php(17): yii\base\Application->run()
+#8 {main}
+2020-08-31 14:19:13 [192.168.83.1][1][v2e2nleb0vekh8fvotsldepce7][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'I57gGbZE8vq3uRJsbGw_cshrSKAwufJUIhZay228splqy5lL4SOqpfD0XzgOGGsng198-mKAoAVLWiqcG87f_w=='
+    'TicketForm' => [
+        'title' => 'C'
+        'description' => 'asd'
+        'imageFiles' => [
+            0 => ''
+        ]
+    ]
+]
+
+$_FILES = [
+    'TicketForm' => [
+        'name' => [
+            'imageFiles' => [
+                0 => 'asdasd.jpeg'
+                1 => 'fg.jpg'
+                2 => 'gdfgdsfg.jpg'
+                3 => 'smallbridge_favicon.png'
+                4 => 'unnamed.jpg'
+            ]
+        ]
+        'type' => [
+            'imageFiles' => [
+                0 => 'image/jpeg'
+                1 => 'image/jpeg'
+                2 => 'image/jpeg'
+                3 => 'image/png'
+                4 => 'image/jpeg'
+            ]
+        ]
+        'tmp_name' => [
+            'imageFiles' => [
+                0 => '/tmp/phpAkAYoR'
+                1 => '/tmp/phpIvBWpZ'
+                2 => '/tmp/phpQT2Vq7'
+                3 => '/tmp/phpZrzcsf'
+                4 => '/tmp/phpc9Kutn'
+            ]
+        ]
+        'error' => [
+            'imageFiles' => [
+                0 => 0
+                1 => 0
+                2 => 0
+                3 => 0
+                4 => 0
+            ]
+        ]
+        'size' => [
+            'imageFiles' => [
+                0 => 36906
+                1 => 12514
+                2 => 256336
+                3 => 10453
+                4 => 24794
+            ]
+        ]
+    ]
+]
+
+$_COOKIE = [
+    'advanced-frontend' => 'v2e2nleb0vekh8fvotsldepce7'
+    '_csrf-frontend' => '8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf\";}'
+    '_identity-frontend' => 'a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a:2:{i:0;s:18:\"_identity-frontend\";i:1;s:46:\"[1,\"yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf\",2592000]\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=v2e2nleb0vekh8fvotsldepce7; _csrf-frontend=8719656d4eca42191d28d52eb07053e6308ddd5fee253f083deb18a0f54fd8dfa%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22IUyRWgX_GMMTbtTUK44ZR9RQiLpWvrmf%22%3B%7D; _identity-frontend=a346412b9878248a00da96cf9a0f45d2d5492df0424495ba0f7c4ee45971b951a%3A2%3A%7Bi%3A0%3Bs%3A18%3A%22_identity-frontend%22%3Bi%3A1%3Bs%3A46%3A%22%5B1%2C%22yj7w-oiGjSS5q3dvlh84mDSMSDrnzuUf%22%2C2592000%5D%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '342547'
+    'HTTP_CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------8926688102142256744884798060'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/add-ticket'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '48948'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/add-ticket'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '342547'
+    'CONTENT_TYPE' => 'multipart/form-data; boundary=---------------------------8926688102142256744884798060'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598883553.5302
+    'REQUEST_TIME' => 1598883553
+]
+2020-09-01 07:58:24 [192.168.83.1][1][7qj6571schm5ubailmgb1afnh3][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::parent in /app/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('parent')
+#1 /app/common/models/User.php(241): yii\db\BaseActiveRecord->__get('parent')
+#2 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(825): common\models\User->afterSave(false, Array)
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#5 /app/common/models/LoginForm.php(69): yii\db\BaseActiveRecord->save()
+#6 /app/frontend/controllers/SiteController.php(132): common\models\LoginForm->login()
+#7 [internal function]: frontend\controllers\SiteController->actionLogin()
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /app/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2020-09-01 07:58:23 [192.168.83.1][1][7qj6571schm5ubailmgb1afnh3][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => '7B1hfR5XPMrHqchAQbYILWot48FgUBR3zPFzbWVPnFGiLgM8S2V_vJTquwU2m0xrAEWHtRcgZj2bnF5VKyb1Gg=='
+    'LoginForm' => [
+        'username' => 'Tibi'
+        'password' => 'asdadogasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'g3i04vfn9h6gb2488td64g9s97'
+    '_csrf-frontend' => '2bf80baa998fca71b3b771af0e12e81ec1e06dfca047fc52e57ca4a3f8a15c81a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"N3bAU2CvSCsEw-DFjhdtwprJWm-8NiiK\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=g3i04vfn9h6gb2488td64g9s97; _csrf-frontend=2bf80baa998fca71b3b771af0e12e81ec1e06dfca047fc52e57ca4a3f8a15c81a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22N3bAU2CvSCsEw-DFjhdtwprJWm-8NiiK%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '241'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '59124'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '241'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598947103.929
+    'REQUEST_TIME' => 1598947103
+]
+2020-09-01 07:58:33 [192.168.83.1][1][2l88st3k4lo7hjnbveob8fpvl5][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::parent in /app/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('parent')
+#1 /app/common/models/User.php(241): yii\db\BaseActiveRecord->__get('parent')
+#2 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(825): common\models\User->afterSave(false, Array)
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#5 /app/common/models/LoginForm.php(69): yii\db\BaseActiveRecord->save()
+#6 /app/frontend/controllers/SiteController.php(132): common\models\LoginForm->login()
+#7 [internal function]: frontend\controllers\SiteController->actionLogin()
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /app/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2020-09-01 07:58:32 [192.168.83.1][1][2l88st3k4lo7hjnbveob8fpvl5][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'MM9oIyHNcaOwowLBjI0PE3zQtcUILaOL7jKk_5DwJ2JGmV4WV4Eo0NrPRPTTuD1yD5v7oGxd5eqNfOuQ3sBQGA=='
+    'LoginForm' => [
+        'username' => 'Tibi'
+        'password' => 'asdadogasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'lb23spph30t3sq5ucuu1vr2lc1'
+    '_csrf-frontend' => '66b09ae0e4acf45cf61f7431579ea9617f892f848a19d546c1e15acebbabb924a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"vV65vLYsjlF5_52asKNedpFacNOoN0wz\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=lb23spph30t3sq5ucuu1vr2lc1; _csrf-frontend=66b09ae0e4acf45cf61f7431579ea9617f892f848a19d546c1e15acebbabb924a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22vV65vLYsjlF5_52asKNedpFacNOoN0wz%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '241'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '59130'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '241'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598947112.9868
+    'REQUEST_TIME' => 1598947112
+]
+2020-09-01 07:59:30 [192.168.83.1][1][kc9qigr5d99l4m0ntt3p623oj1][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::parent in /app/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('parent')
+#1 /app/common/models/User.php(241): yii\db\BaseActiveRecord->__get('parent')
+#2 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(825): common\models\User->afterSave(false, Array)
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#5 /app/common/models/LoginForm.php(69): yii\db\BaseActiveRecord->save()
+#6 /app/frontend/controllers/SiteController.php(132): common\models\LoginForm->login()
+#7 [internal function]: frontend\controllers\SiteController->actionLogin()
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /app/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2020-09-01 07:59:29 [192.168.83.1][1][kc9qigr5d99l4m0ntt3p623oj1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => '-PdRT1dGWIpD_LKATGdAPVi67Nd1_y4rcY5BeEKOGX6uszx9ID8-_Buzy8U-CwZeN4meriSpXmYIuTNKI9FzOA=='
+    'LoginForm' => [
+        'username' => 'Tibi'
+        'password' => 'asdadogasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => '81a48p04g9tmgq5v486dljvld4'
+    '_csrf-frontend' => 'ffc6bec1232968486844b7b9ae4f3fb4f319be625f9840ea15f2d0c7f1e01738a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"VDm2wyfvXOyErlFco3ryQVpMy7r2a_jF\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=81a48p04g9tmgq5v486dljvld4; _csrf-frontend=ffc6bec1232968486844b7b9ae4f3fb4f319be625f9840ea15f2d0c7f1e01738a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22VDm2wyfvXOyErlFco3ryQVpMy7r2a_jF%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '241'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '59134'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '241'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598947169.9957
+    'REQUEST_TIME' => 1598947169
+]
+2020-09-01 08:00:18 [192.168.83.1][1][r9p55dhjcf8e9gt0aihppn8km1][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: common\models\User::parent in /app/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('parent')
+#1 /app/common/models/User.php(241): yii\db\BaseActiveRecord->__get('parent')
+#2 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(825): common\models\User->afterSave(false, Array)
+#3 /app/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#4 /app/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#5 /app/common/models/LoginForm.php(69): yii\db\BaseActiveRecord->save()
+#6 /app/frontend/controllers/SiteController.php(132): common\models\LoginForm->login()
+#7 [internal function]: frontend\controllers\SiteController->actionLogin()
+#8 /app/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /app/vendor/yiisoft/yii2/base/Controller.php(180): yii\base\InlineAction->runWithParams(Array)
+#10 /app/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#11 /app/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#12 /app/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /app/frontend/web/index.php(17): yii\base\Application->run()
+#14 {main}
+2020-09-01 08:00:18 [192.168.83.1][1][r9p55dhjcf8e9gt0aihppn8km1][info][application] $_GET = []
+
+$_POST = [
+    '_csrf-frontend' => 'iXEVMc83QzvLiM0nvK-aTrFaftHJVvmea_OM6WsBpWvxE2JnvwAlb7npuHL2wfAB1Qshuah7kscZof-8PnnVPg=='
+    'LoginForm' => [
+        'username' => 'Tibi'
+        'password' => 'asdadogasd'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'advanced-frontend' => 'i9uf0tqs0u5e5m17hn4qp1eg30'
+    '_csrf-frontend' => '1e306160fff78fcd9ffd4a24b9e70f025da490a5caf9e37004f74860eb80acb0a:2:{i:0;s:14:\"_csrf-frontend\";i:1;s:32:\"xbwVp7fTrauUJnjOdQ_ha-kYrRsUUxpU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 1
+]
+
+$_SERVER = [
+    'USER' => 'vagrant'
+    'HOME' => '/home/vagrant'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_COOKIE' => 'advanced-frontend=i9uf0tqs0u5e5m17hn4qp1eg30; _csrf-frontend=1e306160fff78fcd9ffd4a24b9e70f025da490a5caf9e37004f74860eb80acb0a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22xbwVp7fTrauUJnjOdQ_ha-kYrRsUUxpU%22%3B%7D'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CONTENT_LENGTH' => '241'
+    'HTTP_CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_REFERER' => 'http://y2aa-frontend.test/site/login'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'hu-HU,hu;q=0.8,en-US;q=0.5,en;q=0.3'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0'
+    'HTTP_HOST' => 'y2aa-frontend.test'
+    'SCRIPT_FILENAME' => '/app/frontend/web/index.php'
+    'REDIRECT_STATUS' => '200'
+    'SERVER_NAME' => 'y2aa-frontend.test'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '192.168.83.137'
+    'REMOTE_PORT' => '59144'
+    'REMOTE_ADDR' => '192.168.83.1'
+    'SERVER_SOFTWARE' => 'nginx/1.10.3'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REQUEST_SCHEME' => 'http'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'DOCUMENT_ROOT' => '/app/frontend/web'
+    'DOCUMENT_URI' => '/index.php'
+    'REQUEST_URI' => '/site/login'
+    'SCRIPT_NAME' => '/index.php'
+    'CONTENT_LENGTH' => '241'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1598947218.3193
+    'REQUEST_TIME' => 1598947218
+]

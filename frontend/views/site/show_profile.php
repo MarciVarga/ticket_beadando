@@ -2,9 +2,7 @@
 
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $this yii\web\View */
-/* @var $data frontend\controllers\SiteController */
-
-use yii\helpers\Html;
+/* @var $user common\models\User */
 
 $this->title = 'Show Profile';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,9 +15,20 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
         <div class="card-body">
 
-            <?php foreach ($data as $d): ?>
-                <p class="card-text"> <?= $d ?> </p>
-            <?php endforeach; ?>
+            <p class="card-text">
+                <?= $user->username ?>
+            </p>
+            <p class="card-text">
+                <?= $user->email ?>
+            </p>
+            <p class="card-text">
+                Created At:
+                <?= date("Y-m-d H:i:s", $user->created_at) ?>
+            </p>
+            <p class="card-text">
+                Last Login:
+                <?= $user->last_login ?>
+            </p>
 
             <a href="../site/update-profile/" class="btn btn-primary">Update Profile</a>
         </div>

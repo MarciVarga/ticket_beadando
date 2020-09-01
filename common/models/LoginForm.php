@@ -56,10 +56,22 @@ class LoginForm extends Model
     public function login()
     {
         if ($this->validate()) {
-            $this->getUser()->last_login = date("Y/m/d H:i:s");
-            $this->getUser()->save();
 
-            return Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+
+
+            $loginSuccess = Yii::$app->user->login($this->getUser(), $this->rememberMe ? 3600 * 24 * 30 : 0);
+
+            if ($loginSuccess) {
+                /** @var User $user */
+                $user = Yii::$app->user->identity;
+                $user->last_login = date("Y-m-d H:i:s");
+
+                if (!$user->save()) {
+                    Yii::warning('Failed to update login time ' . json_encode($user->getAttributes()), __METHOD__);
+                }
+            }
+
+            return $loginSuccess;
         }
         
         return false;

@@ -40,37 +40,37 @@ class TicketForm extends Model
         ];
     }
 
-    /**
-     * Add a Ticket
-     *
-     * @return bool|null
-     */
-    public function addTicket()
+    public function fillFrom(Ticket $ticket): TicketForm
     {
-        $ticket = new Ticket();
-        $ticket->user_id = Yii::$app->user->identity->getId();
-        $ticket->title = $this->title;
-        $ticket->description = $this->description;
-        $ticket->save();
+        $this->title = $ticket->title;
+        $this->description = $ticket->description;
 
-        foreach ($this->imageFiles as $file) {
-            $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
-
-            $image = new Image();
-            $image->ticket_id = $ticket->id;
-            $image->path = 'uploads/' . $file->baseName . '.' . $file->extension;
-            $image->save();
-        }
-
-        return true;
+        return $this;
     }
 
-    /*public function upload()
+    public function fillTo(Ticket $ticket): Ticket
     {
-            foreach ($this->imageFiles as $file) {
-                $file->saveAs('uploads/' . $file->baseName . '.' . $file->extension);
-            }
+        $ticket->title = $this->title;
+        $ticket->description = $this->description;
 
-        return true;
-    }*/
+        return $ticket;
+    }
+
+    public function fillImages($ticket_id)
+    {
+        /** @var Image[] $imageFiles */
+        $imageFiles = [];
+
+        foreach ($this->imageFiles as $imageFile) {
+            $imageFile->saveAs('uploads/' . $imageFile->baseName . '.' . $imageFile->extension);
+
+            $image = new Image();
+            $image->ticket_id = $ticket_id;
+            $image->path = 'uploads/' . $imageFile->baseName . '.' . $imageFile->extension;
+
+            array_push($imageFiles, $image);
+        }
+
+        return $imageFiles;
+    }
 }
