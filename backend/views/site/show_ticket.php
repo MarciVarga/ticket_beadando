@@ -26,19 +26,19 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="jumbotron" style="background-color: #e1e1e1;">
         <h1>
             <?= $ticket->title ?>
-            (
-            <?php if ($ticket->is_open): ?>
-                opened
-            <?php else: ?>
-                closed
-            <?php endif; ?>
-            )
+            <?php
+            if ($ticket->is_open) {
+                echo "(opened)";
+            } else {
+                echo "(closed)";
+            }
+            ?>
         </h1>
         <p><?= $ticket->description ?></p>
 
         <div class="container">
             <div class="row">
-                <?php foreach ($images as $image): ?>
+                <?php foreach ($images as $image) { ?>
                     <div class="col-md-4">
                         <div class="thumbnail">
                             <a href="/<?= $image->path ?>" target="_blank">
@@ -46,13 +46,13 @@ $this->params['breadcrumbs'][] = $this->title;
                             </a>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php } ?>
             </div>
         </div>
 
     </div>
 
-    <?php if ($ticket->admin_id == null && $ticket->is_open): ?>
+    <?php if ($ticket->admin_id == null && $ticket->is_open) { ?>
         <?php $form1 = ActiveForm::begin(['action' => ['/site/assign-ticket', 'id'=>$ticket->id], 'id'=>'asd']); ?>
 
         <div class="form-group">
@@ -61,10 +61,10 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         ActiveForm::end();
-        endif;
+        }
     ?>
 
-    <?php if ($ticket->is_open && $ticket->admin_id==Yii::$app->user->identity->getId()): ?>
+    <?php if ($ticket->is_open && $ticket->admin_id==Yii::$app->user->identity->getId()) { ?>
         <?php $form1 = ActiveForm::begin(['action' => ['/site/close-ticket', 'id'=>$ticket->id], 'id'=>'asd']); ?>
 
         <div class="form-group">
@@ -73,21 +73,21 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         ActiveForm::end();
-        endif;
+        }
     ?>
 
     <ul class="list-group">
-        <?php foreach ($comments as $comment): ?>
+        <?php foreach ($comments as $comment) { ?>
             <li class="list-group-item">
                 <?= $comment->text ?>
                 <span class="badge" style="background-color: #286090">
                     <?= $comment->user->username ?> [<?= $comment->create_time ?>]
                 </span>
             </li>
-        <?php endforeach; ?>
+        <?php } ?>
     </ul>
 
-    <?php if ($ticket->is_open && $ticket->admin_id==Yii::$app->user->identity->getId()): ?>
+    <?php if ($ticket->is_open && $ticket->admin_id==Yii::$app->user->identity->getId()) { ?>
         <?php $form = ActiveForm::begin(); ?>
 
         <?= $form->field($comment_form, 'text')->textInput(); ?>
@@ -98,13 +98,13 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
         ActiveForm::end();
-        endif;
+        }
     ?>
 
     <h4 style="font-weight: bolder; color: #159d1b;">
         Admin:
-        <?php if (isset($ticket->admin)): ?>
+        <?php if (isset($ticket->admin)) { ?>
             <?= $ticket->admin->username ?>
-        <?php endif ?>
+        <?php } ?>
     </h4>
 </div>

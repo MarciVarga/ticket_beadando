@@ -21,11 +21,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu">
-                <?php foreach ($tickets as $ticket): ?>
+                <?php foreach ($tickets as $ticket) { ?>
                     <li>
                         <?= Html::a($ticket->title, ['site/show-ticket', 'id' => $ticket->id], ['class' => 'profile-link']) ?>
                     </li>
-                <?php endforeach; ?>
+                <?php } ?>
             </ul>
         </ul>
 

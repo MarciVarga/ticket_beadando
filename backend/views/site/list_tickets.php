@@ -19,12 +19,12 @@ $this->params['breadcrumbs'][] = $this->title;
             </tr>
         </thead>
         <tbody>
-        <?php foreach ($tickets as $ticket): ?>
-            <?php if (!$ticket->is_open): ?>
+        <?php foreach ($tickets as $ticket) { ?>
+            <?php if (!$ticket->is_open) { ?>
                 <tr style="background-color: #ff7a72">
-            <?php else: ?>
+            <?php } else { ?>
                 <tr>
-            <?php endif; ?>
+            <?php } ?>
                     <td>
                         <?= Html::a($ticket->user->username, ['site/show-profile', 'id' => $ticket->user->id], ['class' => 'profile-link']) ?>
                     </td>
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         ?>
                     </td>
                 </tr>
-            <?php endforeach; ?>
+            <?php } ?>
         </tbody>
     </table>
 </div>

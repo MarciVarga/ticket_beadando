@@ -19,21 +19,21 @@ $this->params['breadcrumbs'][] = $this->title;
         </tr>
         </thead>
         <tbody>
-        <?php foreach ($users as $user): ?>
+        <?php foreach ($users as $user) { ?>
         <tr>
             <td>
                 <?= Html::a($user->username, ['site/show-profile', 'id' => $user->id], ['class' => 'profile-link']) ?>
             </td>
             <td>
-                <?php if ($user->is_admin): ?>
+                <?php if ($user->is_admin) { ?>
                     <span class="glyphicon glyphicon-text-background">
-                <?php endif; ?>
+                <?php } ?>
             </td>
             <td>
                 <?= Html::a('Delete', ['site/delete-user', 'id' => $user->id], ['class' => 'btn btn-danger']) ?>
             </td>
         </tr>
-        <?php endforeach; ?>
+        <?php } ?>
         </tbody>
     </table>
 </div>
